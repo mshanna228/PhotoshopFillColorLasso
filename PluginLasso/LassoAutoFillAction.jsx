@@ -7,7 +7,6 @@ if (app.documents.length > 0) {
         
         doc.selection.deselect();
     } catch (e) {
-        // Если выделения нет, ничего не делаем
     }
 }
 
