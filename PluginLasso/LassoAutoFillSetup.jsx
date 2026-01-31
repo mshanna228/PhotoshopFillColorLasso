@@ -1,9 +1,7 @@
-// Находим путь к папке скриптов Photoshop
 var scriptsFolder = app.path + "/Presets/Scripts/PluginLasso/";
 var eventFile = new File(scriptsFolder + "LassoAutoFillAction.jsx");
 
 if (eventFile.exists) {
-    // Удаляем старый нотификатор, если он был, чтобы не дублировать
     for (var i = 0; i < app.notifiers.length; i++) {
         if (app.notifiers[i].event == "setd") {
             // app.notifiers[i].remove(); // Опционально: очистка
@@ -15,3 +13,5 @@ if (eventFile.exists) {
 } else {
     alert("Ошибка: Файл не найден по пути " + eventFile.fsName);
 }
+
+// это я не знаю зачем
