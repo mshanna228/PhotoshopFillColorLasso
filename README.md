@@ -68,3 +68,22 @@ try {
 } catch (err) {
 }
 ```
+
+Для создания объектов на одном (используемом слое):
+```
+try {
+    if (app.documents.length > 0) {
+        var doc = app.activeDocument;
+        
+        var hasSelection = false;
+        try { if (doc.selection.bounds) hasSelection = true; } catch (e) {}
+
+        if (hasSelection) {
+            doc.selection.fill(app.foregroundColor);
+            
+            doc.selection.deselect();
+        }
+    }
+} catch (err) {
+}
+```
